@@ -1,3 +1,7 @@
+<!-------------------------- ПОСТАВЬ
+СТАТИКУ
+ПЖ
+------------------------------ -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +22,7 @@
             <ul id = "menu">
                 <li>
                     <a id = "menu-el" href="#">
-                        <img id="bucket_logo" src="{% static 'mainpage/img/bucket_logo.png' %}" alt="">
+                        <img  id = "bucket_logo" src="{% static 'mainpage/img/bucket_logo.png' %}" alt="">
                         <p id = "log_info">Корзина</p>
                     </a>
                 </li>
@@ -80,20 +84,23 @@
             </ul>
         </aside>
         <main id="shop_configuration">
-            <div id="filter_field">
-                <ul>
-                    <li>Производитель</li>
-                    <li>Производитель</li>
-                    <li>Производитель</li>
-                    <li>Производитель</li>
-                    <li>Производитель</li>
-                    <li>Производитель</li>
-                </ul>
-            </div>
+            <section id="filter_border">
+                <div id="filter_field">
+                    <ul>
+                        <li>Производитель</li>
+                        <li>Количество видеоядер</li>
+                        <li>Производитель</li>
+                        <li>Производитель</li>
+                        <li>Производитель</li>
+                        <li>Производитель</li>
+                    </ul>
+                </div>
+            </section>
             <div id="shop_field">
                 <ul id="details_list">
                     <section class="det_info">
-                        <li></li>
+                        <li><img src="" alt="">туда сюда</li>
+                        <li>бла бла бла </li>
                     </section>
                     <section class="det_info">
                         <li></li>
@@ -102,7 +109,6 @@
                         <li></li>
                     </section>
                 </ul>
-
             </div>
         </main>
     </section>
