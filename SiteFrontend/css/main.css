@@ -2,6 +2,9 @@
     margin:0px;
     padding:0px;
 }
+*:after,:before{
+    box-sizing: border-box;
+}
 
 body{
     color:000;
@@ -137,7 +140,7 @@ ul,li{
 
 /* Настройка для списка блоком с деталями */
 .det_info{
-    display: flex;
+    display: grid;
 }
 /* Убираем подчеркивание */
 #aside_field li a {
