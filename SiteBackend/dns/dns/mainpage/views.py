@@ -1,5 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 def index(request):
-    return HttpResponse("<h4>пися попа</h4>")
-# Create your views here.
+    return render(request, 'mainpage/index.html')
+
+def account(request):
+    return render(request, 'mainpage/index.html')
+
+def basket(request):
+    return render(request, 'mainpage/index.html')
