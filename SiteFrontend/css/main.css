@@ -71,7 +71,7 @@ ul,li{
     padding-bottom: 25px;
     background-color: #a8a8a8;
     height:60%;
-    width:12%;
+    width:10%;
     display:flex;
     text-transform: uppercase;
     text-decoration: none;
@@ -128,9 +128,17 @@ ul,li{
     display: flex;
 }
 /* настройки для фильтров */
+#filter_border{
+    border-right: 1px solid black;
+}
+#filter_field ul{
+    max-width: 200px;
+}
 
 /* Настройка для списка блоком с деталями */
-
+.det_info{
+    display: flex;
+}
 /* Убираем подчеркивание */
 #aside_field li a {
     text-transform: uppercase;
