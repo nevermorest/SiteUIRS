@@ -90,7 +90,7 @@ ul,li{
 }
 /* Настройка изображения на кнопке и толщины границ */
 #button_details{
-    background-image: url("/SiteBackend/dns/dns/mainpage/templates/mainpage/img/det_logo.png");
+    background-image: url("static/mainpage/img/det_logo.png");
     background-color:#a8a8a8;
     border-width: 0px;
     position:relative;
@@ -120,7 +120,7 @@ ul,li{
 
 /* Настройка для готовых сетапов */
 #button_kits{
-    background-image: url("/SiteBackend/dns/dns/mainpage/templates/mainpage/img/kits_logo.png");
+    background-image: url("static/mainpage/img/det_logo.png");
     background-color:#a8a8a8;
     border-width: 0px;
 }
