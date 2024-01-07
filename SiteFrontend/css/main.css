@@ -147,6 +147,11 @@ ul,li{
     text-transform: uppercase;
     text-decoration: none; 
 }
+/* настройка блока с деталями */
+/* Настройка блока с поиском */
+#search_field ul{
+    display:flex;
+}
 
 /* Дно сайта */
 #footer{
