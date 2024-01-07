@@ -1,5 +1,16 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+from django.db import models
 
+class User(AbstractUser):
+    phone = models.CharField('Номер телефона', max_length=15, blank=True, null=True)
+
+    def __str__(self):
+        return self.username
+
+# Добавим related_name для связей с группами и правами
+User._meta.get_field('groups').remote_field.related_name = 'mainpage_user_groups'
+User._meta.get_field('user_permissions').remote_field.related_name = 'mainpage_user_user_permissions'
 
 class Component(models.Model):
     name = models.CharField('Название', max_length=255)
