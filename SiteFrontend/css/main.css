@@ -73,7 +73,6 @@ ul,li{
     padding-top: 25px;
     padding-bottom: 25px;
     background-color: #a8a8a8;
-    height:60%;
     width:10%;
     display:flex;
     text-transform: uppercase;
@@ -147,10 +146,35 @@ ul,li{
     text-transform: uppercase;
     text-decoration: none; 
 }
-/* настройка блока с деталями */
-/* Настройка блока с поиском */
+/* настройка блока с деталями
+ Настройка блока с поиском */
+#search_field{
+    margin:50px;
+}
+#search_field input{
+    height:19px;
+    width:300px;
+}
+#search_field button{
+    height:22px;
+    width:50px;
+}
 #search_field ul{
     display:flex;
+}
+/* Настройка блока с деталями */
+#shop_field{
+    overflow-y: scroll;
+    width:900px;
+    height:450px;
+    border:1px solid black;
+    margin:50px;
+}
+#shop_field .details_info{
+    border:1px solid black;
+    height:150px;
+    width:850px;
+    margin: 10px;
 }
 
 /* Дно сайта */
