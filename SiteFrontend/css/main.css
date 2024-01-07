@@ -12,10 +12,13 @@ body{
     font-family: 'Inter', sans-serif;
     
 }
-ul,li{
+ul,li,a{
     display:block;
     margin: 0px;
     padding:0px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-decoration: none;
 }
 
 /* Настройка меню навигации */
@@ -33,6 +36,7 @@ ul,li{
     color:black;
     font-size: 36px;
     margin-right: 65%;
+    
 }
 /* Выстраиваем все элементы header в ряд */
 #navigate{
@@ -129,6 +133,9 @@ ul,li{
 #shop_configuration{
     display: flex;
 }
+#shop_configuration{
+    background-color: ;
+}
 /* настройки для фильтров */
 #filter_border{
     border-right: 1px solid black;
@@ -177,13 +184,13 @@ ul,li{
     
 }
 #shop_field .details_info{
-    border:1px solid black;
     height:150px;
     width:850px;
     margin: 10px;
     display:grid;
     grid-template-columns: 90px 200px 200px 200px 160px;
-    grid-template-rows:90px 60px ;
+    grid-template-rows: 90px 60px ;
+    box-shadow: 1px 1px 5px #A8A8A8;
 }
 .details_img{
     margin: 5px;
@@ -202,12 +209,17 @@ ul,li{
 }
 .button_go{
     grid-column-start: 5;
-    grid-row-start:1;
-    width: 80px;
-    height:30px;
+    grid-row-start:2;
+    width: 100px;
+    height:40px;
     justify-self: center;
     align-self: center;
     margin: 5px;
+}
+.details_cost{
+    justify-self: center;
+    align-self: center;
+    font-size:16px;
 }
 
 /* Дно сайта */
