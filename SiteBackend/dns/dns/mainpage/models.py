@@ -10,4 +10,13 @@ class Component(models.Model):
         abstract = True
         
     def __str__(self):
-        return self.firstname
+        return self.name
+    
+class VideoCard(Component):
+    memory_size = models.IntegerField('Объем памяти', help_text='в гигабайтах')
+    chipset = models.CharField('Чипсет', max_length=50)
+
+class Processor(Component):
+    cores = models.IntegerField('Количество ядер')
+    clock_speed = models.DecimalField('Тактовая частота', max_digits=5, decimal_places=2)
+    socket = models.CharField('Сокет', max_length=20)
