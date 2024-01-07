@@ -12,12 +12,15 @@ body{
     font-family: 'Inter', sans-serif;
     
 }
-ul,li,a{
+ul,li{
     display:block;
     margin: 0px;
     padding:0px;
-    text-transform: uppercase;
-    text-decoration: none;
+    
+    
+}
+a{
+    color: #000 !important;
     text-decoration: none;
 }
 
@@ -132,9 +135,6 @@ ul,li,a{
 }
 #shop_configuration{
     display: flex;
-}
-#shop_configuration{
-    background-color: ;
 }
 /* настройки для фильтров */
 #filter_border{
