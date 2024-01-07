@@ -16,6 +16,12 @@ ul,li{
     display:block;
     margin: 0px;
     padding:0px;
+    
+    
+}
+a{
+    color: #000 !important;
+    text-decoration: none;
 }
 
 /* Настройка меню навигации */
@@ -33,6 +39,7 @@ ul,li{
     color:black;
     font-size: 36px;
     margin-right: 65%;
+    
 }
 /* Выстраиваем все элементы header в ряд */
 #navigate{
@@ -73,7 +80,6 @@ ul,li{
     padding-top: 25px;
     padding-bottom: 25px;
     background-color: #a8a8a8;
-    height:60%;
     width:10%;
     display:flex;
     text-transform: uppercase;
@@ -146,6 +152,74 @@ ul,li{
 #aside_field li a {
     text-transform: uppercase;
     text-decoration: none; 
+}
+/* настройка блока с деталями
+ Настройка блока с поиском */
+#search_field{
+    margin:50px;
+}
+#search_field input{
+    height:19px;
+    width:300px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    margin-left:3px;
+    
+}
+#search_field button{
+    height:22px;
+    width:50px;
+}
+#search_field ul{
+    display:flex;
+}
+/* Настройка блока с деталями */
+#shop_field{
+    overflow-y: scroll;
+    width:900px;
+    height:450px;
+    border:1px solid black;
+    margin:50px;
+    
+}
+#shop_field .details_info{
+    height:150px;
+    width:850px;
+    margin: 10px;
+    display:grid;
+    grid-template-columns: 90px 200px 200px 200px 160px;
+    grid-template-rows: 90px 60px ;
+    box-shadow: 1px 1px 5px #A8A8A8;
+}
+.details_img{
+    margin: 5px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    justify-self: center;
+    align-self: center;
+}
+.details_description{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    margin: 5px;
+}
+.button_go{
+    grid-column-start: 5;
+    grid-row-start:2;
+    width: 100px;
+    height:40px;
+    justify-self: center;
+    align-self: center;
+    margin: 5px;
+}
+.details_cost{
+    justify-self: center;
+    align-self: center;
+    font-size:16px;
 }
 
 /* Дно сайта */
