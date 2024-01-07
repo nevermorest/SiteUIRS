@@ -93,7 +93,7 @@ ul,li{
 }
 /* Настройка изображения на кнопке и толщины границ */
 #button_details{
-    background-image: url("/SiteFrontend/img/det_logo.png");
+    background-image: url("/SiteFrontend/static/mainpage/img/det_logo.png");
     background-color:#a8a8a8;
     border-width: 0px;
     position:relative;
@@ -123,7 +123,7 @@ ul,li{
 
 /* Настройка для готовых сетапов */
 #button_kits{
-    background-image: url("/SiteFrontend/img/kits_logo.png");
+    background-image: url("/SiteFrontend/static/mainpage/img/kits_logo.png");
     background-color:#a8a8a8;
     border-width: 0px;
 }
