@@ -27,7 +27,7 @@ a{
 /* Настройка меню навигации */
 #header{
     background-color: #A8A8A8;
-    background-image: url('/SiteFrontend/img/snwflks-29.gif');
+    background-image: url('/SiteFrontend/static/mainpage/img/snwflks-29.gif');
     max-height: 40px;
     width: 100%;
     padding-bottom:2%;
