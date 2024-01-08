@@ -1,15 +1,10 @@
-<!--------------------------
- ПОСТАВЬ
-СТАТИКУ
-ПЖ
------------------------------- -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitename(Change)(NeedChange)</title>
+    <title>Sitename(Change)(change)</title>
     <link rel="stylesheet" href="{% static 'mainpage/css/main.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +12,10 @@
 </head>
 <body>
     <!-- Шапка сайта с навигацией -->
-    <header id = "header">
+    <header id="header">
         <nav id="navigate">
-            <h3 id = "sitename">SiteName</h3>
-            <ul id = "menu">
+            <h3 id="sitename"><a href="#">DNS5</a><img id="santa_dance" src="{% static 'mainpage/img/picmix.com_1748393.gif' %}" alt="я джифка"></h3>
+            <ul id="menu">
                 <li>
                     <a id = "menu-el" href="/basket">
                         <img  id = "bucket_logo" src="{% static 'mainpage/img/bucket_logo.png' %}" alt="">
@@ -38,7 +33,7 @@
                         <img  id = "reg_logo" src="{% static 'mainpage/img/reg_logo.png' %}" alt="">
                         <p id = "log_info">Вход</p>
                     </a>
-                </li>                
+                </li>              
             </ul>
         </nav>
     </header>
@@ -49,7 +44,7 @@
                 <li>
                     <div class="dropdown">
                         <button id="button_details"></button>
-                        <p id = "log_info">Комплектующие</p>
+                        <p id="log_info">Комплектующие</p>
                         <div class="dropdown-content">
                             <ul id="details_dropdown_content">
                                 <li class="button_info_dropdown">
@@ -80,7 +75,7 @@
                 </li>
                 <li>
                     <button id="button_kits"></button>
-                    <p id = "log_info">Готовые наборы</p>
+                    <p id="log_info">Готовые наборы</p>
                 </li>   
             </ul>
         </aside>
@@ -97,20 +92,35 @@
                     </ul>
                 </div>
             </section>
-            <div id="shop_field">
-                <ul id="details_list">
-                    <section class="det_info">
-                        <li><img src="" alt="">туда сюда</li>
-                        <li>бла бла бла </li>
-                    </section>
-                    <section class="det_info">
-                        <li></li>
-                    </section>
-                    <section class="det_info">
-                        <li></li>
-                    </section>
-                </ul>
-            </div>
+            <section id="shop_section">
+                <div id="search_field">
+                    <ul>
+                        <li>
+                            <img src="{% static 'mainpage/img/search.png' %}" alt="">
+                        </li>
+                        <li>
+                            <input id="search_text" type="text" placeholder="Введите название">
+                        </li>
+                        <li>
+                            <button type="submit">Поиск</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="shop_field">
+                    {% for video_card in video_cards %}
+                        <section class="details_info">
+                            <img class="details_img" src="{{ video_card.image.url }}" alt="Фото детали" style=" max-width: 100%;">
+                            <p class="details_description">{{ video_card.name }} - {{ video_card.memory_size }} GB</p>
+                            <p class="details_cost">₽ {{ video_card.price }}</p>
+                            <a class="button_go" href="#"><button class="button_go">Перейти</button></a>
+                            <p class="details_count">Количество в магазине: {{ video_card.quantity }}</p>
+                            <p class="details_rating">Оценка: {{ video_card.chipset }}</p>
+                            <p class="dealer_name">Фирма: {{ video_card.manufacturer }}</p>
+                        </section>
+                    {% endfor %}
+                </div>
+            </section>
+            
         </main>
     </section>
     <footer id="footer">
