@@ -48,16 +48,22 @@
                         <div class="dropdown-content">
                             <ul id="details_dropdown_content">
                                 <li class="button_info_dropdown">
-                                    <button>Видеокарта</button>      
+                                    <a href="{% url 'videocard' %}">
+                                        <button >видеокарты</button> 
+                                    </a>     
                                 </li>
                                 <li class="button_info_dropdown">
-                                    <button>Материнская плата</button> 
+                                    <a href="{% url 'motherboard' %}">
+                                        <button >Материнские платы</button> 
+                                    </a>
                                 </li>
                                 <li class="button_info_dropdown">
-                                    <button>Процессор</button> 
+                                    <a href="{% url 'processor' %}">
+                                        <button >Процессоры</button> 
+                                    </a>
                                 </li>
                                 <li class="button_info_dropdown">
-                                    <button>Система охлаждения</button> 
+                                    <button >Система охлаждения</button> 
                                 </li>
                                 <li class="button_info_dropdown">
                                     <button>Системный блок</button> 
@@ -107,15 +113,15 @@
                     </ul>
                 </div>
                 <div id="shop_field">
-                    {% for video_card in video_cards %}
+                    {% for component in components %}
                         <section class="details_info">
-                            <img class="details_img" src="{{ video_card.image.url }}" alt="Фото детали" style=" max-width: 100%;">
-                            <p class="details_description">{{ video_card.name }} - {{ video_card.memory_size }} GB</p>
-                            <p class="details_cost">{{ video_card.price }} ₽</p>
+                            <img class="details_img" src="{{ component.image.url }}" alt="Фото детали" style=" max-width: 100%;">
+                            <p class="details_description">{{ component.name }} - {{ component.memory_size }} GB</p>
+                            <p class="details_cost">{{ component.price }} ₽</p>
                             <a class="button_go" href="#"><button class="button_go">Перейти</button></a>
-                            <p class="details_count">Количество в магазине: {{ video_card.quantity }}</p>
-                            <p class="details_rating">Оценка: {{ video_card.chipset }}</p>
-                            <p class="dealer_name">Фирма: {{ video_card.manufacturer }}</p>
+                            <p class="details_count">Количество в магазине: {{ component.quantity }}</p>
+                            <p class="details_rating">Оценка:</p>
+                            <p class="dealer_name">Фирма:</p>
                         </section>
                     {% endfor %}
                 </div>
