@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.core.validators import MinValueValidator
 from django.db import models
 
 class User(AbstractUser):
@@ -28,7 +29,52 @@ class VideoCard(Component):
     memory_size = models.IntegerField('Объем памяти', help_text='в гигабайтах')
     chipset = models.CharField('Чипсет', max_length=50)
 
-class Processor(Component):
-    cores = models.IntegerField('Количество ядер')
-    clock_speed = models.DecimalField('Тактовая частота', max_digits=5, decimal_places=2)
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+
+class Processor(models.Model):
     socket = models.CharField('Сокет', max_length=20)
+    release_year = models.IntegerField('Год релиза', validators=[MinValueValidator(1900)])
+    cores = models.IntegerField('Количество ядер', validators=[MinValueValidator(1)])
+    threads = models.IntegerField('Количество потоков', validators=[MinValueValidator(1)])
+    l2_cache_size = models.CharField('Размер кэша L2', max_length=20)
+    l3_cache_size = models.CharField('Размер кэша L3', max_length=20)
+    technical_process = models.CharField('Техпроцесс', max_length=20)
+    core = models.CharField('Ядро', max_length=20)
+    clock_speed = models.DecimalField('Тактовая частота', max_digits=5, decimal_places=2)
+    max_clock_speed = models.DecimalField('Максимальная тактовая частота', max_digits=5, decimal_places=2)
+    ram_type = models.CharField('Тип ОЗУ', max_length=20)
+    max_ram = models.CharField('Максимальный объем ОЗУ', max_length=20)
+    num_channels = models.IntegerField('Количество каналов памяти', validators=[MinValueValidator(1)])
+    heat_release = models.CharField('Тепловыделение', max_length=20)
+    max_temperature = models.DecimalField('Максимальная температура процессора', max_digits=5, decimal_places=2)
+    virtualization = models.BooleanField('Виртуализация')
+
+
+
+class motherboard(Component):
+    memory_size = models.IntegerField('Объем памяти', help_text='в гигабайтах')
+    chipset = models.CharField('Чипсет', max_length=50)
+
+class Cooling(Component):
+    memory_size = models.IntegerField('Объем памяти', help_text='в гигабайтах')
+    chipset = models.CharField('Чипсет', max_length=50)
+
+class corpus(Component):
+    memory_size = models.IntegerField('Объем памяти', help_text='в гигабайтах')
+    chipset = models.CharField('Чипсет', max_length=50)
+
+class RAM(Component):
+    memory_size = models.IntegerField('Объем памяти', help_text='в гигабайтах')
+    chipset = models.CharField('Чипсет', max_length=50)
+
+class SoundСard(Component):
+    memory_size = models.IntegerField('Объем памяти', help_text='в гигабайтах')
+    chipset = models.CharField('Чипсет', max_length=50)
