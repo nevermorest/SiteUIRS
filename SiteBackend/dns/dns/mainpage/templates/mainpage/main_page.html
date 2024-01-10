@@ -100,30 +100,40 @@
             </section>
             <section id="shop_section">
                 <div id="search_field">
-                    <ul>
-                        <li>
-                            <img src="{% static 'mainpage/img/search.png' %}" alt="">
-                        </li>
-                        <li>
-                            <input id="search_text" type="text" placeholder="Введите название">
-                        </li>
-                        <li>
-                            <button type="submit">Поиск</button>
-                        </li>
-                    </ul>
+                    <form method="GET" action="">
+                        {% csrf_token %}
+                        <ul>
+                            <li>
+                                <img src="{% static 'mainpage/img/search.png' %}" alt="">
+                            </li>
+                            <li>
+                                <input type="text" name="search_text" id="search_text" placeholder="Введите название">
+                            </li>
+                            <li>
+                                <button type="submit">Поиск</button>
+                            </li>
+                        </ul>
+                    </form>
                 </div>
                 <div id="shop_field">
-                    {% for component in components %}
-                        <section class="details_info">
-                            <img class="details_img" src="{{ component.image.url }}" alt="Фото детали" style=" max-width: 100%;">
-                            <p class="details_description">{{ component.name }} - {{ component.memory_size }} GB</p>
-                            <p class="details_cost">{{ component.price }} ₽</p>
-                            <a class="button_go" href="#"><button class="button_go">Перейти</button></a>
-                            <p class="details_count">Количество в магазине: {{ component.quantity }}</p>
-                            <p class="details_rating">Оценка:</p>
-                            <p class="dealer_name">Фирма:</p>
-                        </section>
-                    {% endfor %}
+                    {% if components %}
+                        {% if search_form.search_text.value %}
+                            <p>По вашему запросу "{{ search_form.search_text.value }}" найдено {{ components|length }} товаров:</p>
+                        {% endif %}
+                        {% for component in components %}
+                            <section class="details_info">
+                                <img class="details_img" src="{{ component.image.url }}" alt="Фото детали" style=" max-width: 100%;">
+                                <p class="details_description">{{ component.name }} - {{ component.memory_size }} GB</p>
+                                <p class="details_cost">{{ component.price }} ₽</p>
+                                <a class="button_go" href="#"><button class="button_go">Перейти</button></a>
+                                <p class="details_count">Количество в магазине: {{ component.quantity }}</p>
+                                <p class="details_rating">Оценка:</p>
+                                <p class="dealer_name">Фирма:</p>
+                            </section>
+                        {% endfor %}
+                        {% else %}
+                        <p class="details_description">По вашему запросу "{{ search_form.search_text.value }}" ничего не найдено.</p>
+                        {% endif %}
                 </div>
             </section>
             

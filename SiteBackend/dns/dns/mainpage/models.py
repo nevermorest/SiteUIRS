@@ -9,7 +9,6 @@ class User(AbstractUser):
     def __str__(self):
         return self.username
 
-# Добавим related_name для связей с группами и правами
 User._meta.get_field('groups').remote_field.related_name = 'mainpage_user_groups'
 User._meta.get_field('user_permissions').remote_field.related_name = 'mainpage_user_user_permissions'
 
