@@ -50,25 +50,25 @@
                         <div class="dropdown-content">
                             <ul id="details_dropdown_content">
                                 <li class="button_info_dropdown">
-                                    <button>Видеокарта</button>      
+                                    <p onclick="showFiltersVideoCard()">Видеокарта</p>      
                                 </li>
                                 <li class="button_info_dropdown">
-                                    <button>Материнская плата</button> 
+                                    <p onclick="showFiltersMother()">Материнская плата</p> 
                                 </li>
                                 <li class="button_info_dropdown">
-                                    <button>Процессор</button> 
+                                    <p onclick="showCPFilters()">Процессор</p> 
                                 </li>
                                 <li class="button_info_dropdown">
-                                    <button>Система охлаждения</button> 
+                                    <p>Система охлаждения</p> 
                                 </li>
                                 <li class="button_info_dropdown">
-                                    <button>Системный блок</button> 
+                                    <p>Системный блок</p> 
                                 </li>
                                 <li class="button_info_dropdown">
-                                    <button>Накопитель</button> 
+                                    <p>Накопитель</p> 
                                 </li>
                                 <li class="button_info_dropdown">
-                                    <button>Оперативная память</button> 
+                                    <p>Оперативная память</p> 
                                 </li>
                             </ul>
                                                      
@@ -83,21 +83,235 @@
         </aside>
         <main id="shop_configuration">
             <section id="filter_border">
-                <div id="filter_field">
-                    <ul>
-                        <li>Производитель</li>
-                        <li>Количество видеоядер</li>
-                        <li>Производитель</li>
-                        <li>Производитель</li>
-                        <li>Производитель</li>
-                        <li>Производитель</li>
+                <h3>Фильтры</h3>
+                <div id="prod_section">
+                    <p id="prod" onclick="changecolor(`prod_accardeon`)">▸Производитель</p>
+                        <ul id="prod_accardeon" style="display:none;">
+                            <li> 
+                                <input type="checkbox"> AMD
+                            </li>
+                            <li>
+                                <input type="checkbox">Intel
+                            </li>
+                        </ul>
+                </div>
+                
+                <div id="videoMem_section">
+                    <p id="videoMem" onclick="changecolor(`videoMem_accardeon`)">▸Объем видеопамяти</p>
+                        <ul id="videoMem_accardeon" style="display:none;">
+                            <li> 
+                                <input type="checkbox">1 Гб
+                            </li>
+                            <li>
+                                <input type="checkbox">2 Гб
+                            </li>
+                            <li>
+                                <input type="checkbox">4 ГБ
+                            </li>
+                            <li>
+                                <input type="checkbox">8 ГБ
+                            </li>
+                        </ul>
+                </div>
+                <div id="price_section">
+                    <p id="price" onclick="changecolor(`price_accardeon`)">▸Цена</p>
+                    <ul id = "price_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox"> Менее 5000 ₽
+                        </li>
+                        <li>
+                            <input type="checkbox"> 5001 - 10000 ₽
+                        </li>
+                        <li>
+                            <input type="checkbox"> 10001 - 19000 ₽
+                        </li>
+                        <li>
+                            <input type="checkbox"> 19001 - 70000 ₽
+                        </li>
+                    </ul>
+                </div>
+                <div id="cpuCores_section">
+                    <p id="cpuCores" onclick="changecolor(`cpuCores_accardeon`)">▸Количество ядер</p>
+                        <ul id="cpuCores_accardeon" style="display:none;">
+                            <li> 
+                                <input type="checkbox"> 2
+                            </li>
+                            <li>
+                                <input type="checkbox"> 4
+                            </li>
+                            <li>
+                                <input type="checkbox"> 6
+                            </li>
+                            <li>
+                                <input type="checkbox"> 8
+                            </li>
+                            <li>
+                                <input type="checkbox"> 12
+                            </li>
+                        </ul>
+                </div>
+                
+                
+                <div id="prodGpu_section">
+                    <p id="prodGPU" onclick="changecolor(`prodGPU_accardeon`)">▸Производитель графического процессора</p>
+                    <ul id = "prodGPU_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox"> AMD
+                        </li>
+                        <li>
+                            <input type="checkbox"> INTEL
+                        </li>
+                    </ul>
+                </div>
+                <div id="busSize_section">
+                    <p id="busSize" onclick="changecolor(`busSize_accardeon`)">▸Разрядность шины</p>
+                    <ul id = "busSize_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox">64 бит
+                        </li>
+                        <li>
+                            <input type="checkbox">128 бит
+                        </li>
+                        <li>
+                            <input type="checkbox">256 бит
+                        </li>
+                        <li>
+                            <input type="checkbox">320 бит
+                        </li>
+                    </ul>
+                </div>
+                <div id="monitorConSize_section">
+                    <p id="monitorConSize" onclick="changecolor(`monitorConSize_accardeon`)">▸Количество одновременно подклчаемых мониторов</p>
+                    <ul id = "monitorConSize_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox"> 1 
+                        </li>
+                        <li>
+                            <input type="checkbox"> 2
+                        </li>
+                        <li>
+                            <input type="checkbox"> 3
+                        </li>
+                        <li>
+                            <input type="checkbox"> 4
+                        </li>
+                    </ul>
+                </div>
+                <div id="socket_section">
+                    <p id="socket" onclick="changecolor(`socket_accardeon`)">▸Сокет</p>
+                    <ul id = "socket_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox"> AM5
+                        </li>
+                        <li>
+                            <input type="checkbox"> AM4
+                        </li>
+                        <li>
+                            <input type="checkbox"> LGA 1700
+                        </li>
+                        <li>
+                            <input type="checkbox"> LGA 1200
+                        </li>
+                    </ul>
+                </div>
+                <div id="chipset_section">
+                    <p id="chipset" onclick="changecolor(`chipset_accardeon`)">▸Чипсет</p>
+                    <ul id = "chipset_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox"> Intel Z790
+                        </li>
+                        <li>
+                            <input type="checkbox"> Intel Z690
+                        </li>
+                        <li>
+                            <input type="checkbox"> Intel Z590
+                        </li>
+                        <li>
+                            <input type="checkbox"> AMD X670
+                        </li>
+                        <li>
+                            <input type="checkbox"> AMD X570
+                        </li>
+                        <li>
+                            <input type="checkbox"> AMD X370
+                        </li>
+                    </ul>
+                </div>
+                <div id="memoryTypeCon_section">
+                    <p id="memoryTypeCon" onclick="changecolor(`memoryTypeCon_accardeon`)">▸Тип поддерживаемой памяти</p>
+                    <ul id = "memoryTypeCon_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox"> DDR5
+                        </li>
+                        <li>
+                            <input type="checkbox"> DDR4
+                        </li>
+                        <li>
+                            <input type="checkbox"> DDR3
+                        </li>
+                    </ul>
+                </div>
+                <div id="memorySlotSize_section">
+                    <p id="memorySlotSize" onclick="changecolor(`memorySlotSiz_accardeon`)">▸Количество слотов памяти</p>
+                    <ul id = "memorySlotSize_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox"> 1
+                        </li>
+                        <li>
+                            <input type="checkbox"> 2
+                        </li>
+                        <li>
+                            <input type="checkbox"> 3
+                        </li>
+                        <li>
+                            <input type="checkbox"> 4
+                        </li>
+                    </ul>
+                </div>
+                <div id="memoryM2Size_section">
+                    <p id="memoryM2Size" onclick="changecolor(`memoryM2Size_accardeon`)">▸Количество слотов m2</p>
+                    <ul id = "memoryM2Size_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox"> 1
+                        </li>
+                        <li>
+                            <input type="checkbox"> 2
+                        </li>
+                        <li>
+                            <input type="checkbox"> 3
+                        </li>
+                    </ul>
+                </div>
+                <div id="memoryType_section">
+                    <p id="memoryType" onclick="changecolor(`memoryType_accardeon`)">▸Тип ОЗУ</p>
+                    <ul id = "memoryType_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox"> ddr5
+                        </li>
+                        <li>
+                            <input type="checkbox"> ddr4
+                        </li>
+                        <li>
+                            <input type="checkbox"> ddr3
+                        </li>
+                    </ul>
+                </div>
+                <div id="coreSize_section">
+                    <p id="coreSize" onclick="changecolor(`coreSize_accardeon`)">▸Количество ядер процессора</p>
+                    <ul id = "coreSize_accardeon" style="display:none;">
+                        <li> 
+                            <input type="checkbox"> 4
+                        </li>
+                        <li>
+                            <input type="checkbox"> 8
+                        </li>
                     </ul>
                 </div>
             </section>
             <section id="shop_section">
                 <div id="search_field">
                     <ul>
-                        <li><img src="/SiteFrontend/static/mainpage/img/search.png" alt=""></li>
+                        <li><img id="img_search" src="/SiteFrontend/static/mainpage/img/search.png" alt=""></li>
                         <li>
                             <input id="search_text" type="text" placeholder="Введите название ">
                         </li>
@@ -105,16 +319,15 @@
                     </ul>
                 </div>
                 <div id="shop_field">
-
                     <section class="details_info">
-                                <img class="details_img" alt="Фото детали">
+                                <img src="/SiteFrontend/static/mainpage/img/imagecard.png" class="details_img" alt="Фото детали"">
                                 <p class="details_description">Видеокарта гигабайт туда суда было 
                                 вспылало два ядра два гига очень быстрая классная смешная интересная/12гб</p>
                                 <p class="details_cost"> ₽</p>
                                 <a class="button_go" href="#"><button class="button_go">Перейти</button></a>
                                 <p class="details_count">Количество в магазине:</p>
                                 <p class="details_rating">Оценка: </p>
-                                <p class="dealer_name">Фирма: </p>
+                                <button class="add_det_bucket">Добавить в корзину</button>
                     </section>
                     <section class="details_info">
                         
@@ -159,6 +372,8 @@
                 </li>
             </ul>
         </section>
-    </footer>   
+    </footer>
+
+    <script src="../../scripts/accardeon.js"></script>
 </body>
 </html>
