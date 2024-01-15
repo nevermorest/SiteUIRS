@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import VideoCard, Motherboard, Processor
+from django.contrib.auth.decorators import login_required
 from .forms import SearchForm
 
 def index(request):
@@ -13,7 +14,7 @@ def index(request):
     return render(request, 'mainpage/main_page.html', {'components': video_cards, 'search_form': search_form})
 
 
-def account(request):
+def custom_login(request):
     return render(request, 'mainpage/login_page.html')
 
 def basket(request):
@@ -51,3 +52,7 @@ def processor_list(request):
         processor = processor.filter(name__icontains=search_text)
 
     return render(request, 'mainpage/main_page.html', {'components': processor, 'search_form': search_form})
+
+@login_required
+def profile_view(request):
+    return render(request, 'mainpage/profile.html')

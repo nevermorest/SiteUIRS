@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li>
-                    <a id = "menu-el" href="/account">
+                    <a id = "menu-el" href="/login">
                         <img  id = "account_logo" src="{% static 'mainpage/img/account_logo.png' %}" alt="">
                         <p id = "log_info">Аккаунт</p>
                     </a>
@@ -123,11 +123,11 @@
                         {% for component in components %}
                             <section class="details_info">
                                 <img class="details_img" src="{{ component.image.url }}" alt="Фото детали" style=" max-width: 100%;">
-                                <p class="details_description">{{ component.name }} - {{ component.memory_size }} GB</p>
+                                <p class="details_description">{{ component.name }}</p>
                                 <p class="details_cost">{{ component.price }} ₽</p>
                                 <a class="button_go" href="#"><button class="button_go">Перейти</button></a>
                                 <p class="details_count">Количество в магазине: {{ component.quantity }}</p>
-                                <p class="details_rating">Оценка:</p>
+                                <p class="details_rating"></p>
                                 <p class="dealer_name">Фирма:</p>
                             </section>
                         {% endfor %}
