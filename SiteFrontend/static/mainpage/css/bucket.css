@@ -204,7 +204,8 @@ a{
     width:100%;
 }
 #footer{
-    border-top:0.5px solid black
+    border-top:0.5px solid black;
+    height:100vh;
 }
 #about ul{
     display:flex;
@@ -212,4 +213,6 @@ a{
 #about ul li {
     margin-left: 100px;
     max-width: 200px;
+    margin-left:auto;
+    margin-right:auto;
 }
