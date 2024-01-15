@@ -57,7 +57,7 @@ function showFiltersMother(){ //пишешь функцию с нужным пр
     }
 }
 function showCPFilters(){ //пишешь функцию с нужным пресетом, вызываешь на он клик в id="details_dropdown_content"
-    const preset =["prod_section", "price_section","socket_section","coreSize_section","memoryType_section"]
+    const preset =["prod_section", "price_section","socket_section","cpuCores_section","memoryType_section"]
     let allNodes = document.getElementById("filter_border").childNodes;
     for(var i = 0; i < allNodes.length; i++) {
         if(allNodes[i].nodeType == 1){

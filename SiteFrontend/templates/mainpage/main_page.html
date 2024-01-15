@@ -91,10 +91,7 @@
                                 <input type="checkbox"> AMD
                             </li>
                             <li>
-                                <input type="checkbox"> XUI
-                            </li>
-                            <li>
-                                <input type="checkbox"> INCEL
+                                <input type="checkbox">Intel
                             </li>
                         </ul>
                 </div>
@@ -103,13 +100,16 @@
                     <p id="videoMem" onclick="changecolor(`videoMem_accardeon`)">▸Объем видеопамяти</p>
                         <ul id="videoMem_accardeon" style="display:none;">
                             <li> 
-                                <input type="checkbox"> 8Gb
+                                <input type="checkbox">1 Гб
                             </li>
                             <li>
-                                <input type="checkbox"> 2Gb
+                                <input type="checkbox">2 Гб
                             </li>
                             <li>
-                                <input type="checkbox"> 214Mb
+                                <input type="checkbox">4 ГБ
+                            </li>
+                            <li>
+                                <input type="checkbox">8 ГБ
                             </li>
                         </ul>
                 </div>
@@ -117,13 +117,16 @@
                     <p id="price" onclick="changecolor(`price_accardeon`)">▸Цена</p>
                     <ul id = "price_accardeon" style="display:none;">
                         <li> 
-                            <input type="checkbox"> 2000
+                            <input type="checkbox"> Менее 5000 ₽
                         </li>
                         <li>
-                            <input type="checkbox"> 6000
+                            <input type="checkbox"> 5001 - 10000 ₽
                         </li>
                         <li>
-                            <input type="checkbox"> 8000
+                            <input type="checkbox"> 10001 - 19000 ₽
+                        </li>
+                        <li>
+                            <input type="checkbox"> 19001 - 70000 ₽
                         </li>
                     </ul>
                 </div>
@@ -131,6 +134,9 @@
                     <p id="cpuCores" onclick="changecolor(`cpuCores_accardeon`)">▸Количество ядер</p>
                         <ul id="cpuCores_accardeon" style="display:none;">
                             <li> 
+                                <input type="checkbox"> 2
+                            </li>
+                            <li>
                                 <input type="checkbox"> 4
                             </li>
                             <li>
@@ -138,6 +144,9 @@
                             </li>
                             <li>
                                 <input type="checkbox"> 8
+                            </li>
+                            <li>
+                                <input type="checkbox"> 12
                             </li>
                         </ul>
                 </div>
@@ -158,10 +167,16 @@
                     <p id="busSize" onclick="changecolor(`busSize_accardeon`)">▸Разрядность шины</p>
                     <ul id = "busSize_accardeon" style="display:none;">
                         <li> 
-                            <input type="checkbox"> 2 бит
+                            <input type="checkbox">64 бит
                         </li>
                         <li>
-                            <input type="checkbox"> 4 юит
+                            <input type="checkbox">128 бит
+                        </li>
+                        <li>
+                            <input type="checkbox">256 бит
+                        </li>
+                        <li>
+                            <input type="checkbox">320 бит
                         </li>
                     </ul>
                 </div>
@@ -174,16 +189,28 @@
                         <li>
                             <input type="checkbox"> 2
                         </li>
+                        <li>
+                            <input type="checkbox"> 3
+                        </li>
+                        <li>
+                            <input type="checkbox"> 4
+                        </li>
                     </ul>
                 </div>
                 <div id="socket_section">
                     <p id="socket" onclick="changecolor(`socket_accardeon`)">▸Сокет</p>
                     <ul id = "socket_accardeon" style="display:none;">
                         <li> 
-                            <input type="checkbox"> A
+                            <input type="checkbox"> AM5
                         </li>
                         <li>
-                            <input type="checkbox"> B
+                            <input type="checkbox"> AM4
+                        </li>
+                        <li>
+                            <input type="checkbox"> LGA 1700
+                        </li>
+                        <li>
+                            <input type="checkbox"> LGA 1200
                         </li>
                     </ul>
                 </div>
@@ -191,10 +218,22 @@
                     <p id="chipset" onclick="changecolor(`chipset_accardeon`)">▸Чипсет</p>
                     <ul id = "chipset_accardeon" style="display:none;">
                         <li> 
-                            <input type="checkbox"> B
+                            <input type="checkbox"> Intel Z790
                         </li>
                         <li>
-                            <input type="checkbox"> A
+                            <input type="checkbox"> Intel Z690
+                        </li>
+                        <li>
+                            <input type="checkbox"> Intel Z590
+                        </li>
+                        <li>
+                            <input type="checkbox"> AMD X670
+                        </li>
+                        <li>
+                            <input type="checkbox"> AMD X570
+                        </li>
+                        <li>
+                            <input type="checkbox"> AMD X370
                         </li>
                     </ul>
                 </div>
@@ -202,21 +241,30 @@
                     <p id="memoryTypeCon" onclick="changecolor(`memoryTypeCon_accardeon`)">▸Тип поддерживаемой памяти</p>
                     <ul id = "memoryTypeCon_accardeon" style="display:none;">
                         <li> 
-                            <input type="checkbox"> ddr100
+                            <input type="checkbox"> DDR5
                         </li>
                         <li>
-                            <input type="checkbox"> ddrd
+                            <input type="checkbox"> DDR4
+                        </li>
+                        <li>
+                            <input type="checkbox"> DDR3
                         </li>
                     </ul>
                 </div>
                 <div id="memorySlotSize_section">
                     <p id="memorySlotSize" onclick="changecolor(`memorySlotSiz_accardeon`)">▸Количество слотов памяти</p>
-                    <ul id = "memorySlotSiz_accardeon" style="display:none;">
+                    <ul id = "memorySlotSize_accardeon" style="display:none;">
                         <li> 
                             <input type="checkbox"> 1
                         </li>
                         <li>
                             <input type="checkbox"> 2
+                        </li>
+                        <li>
+                            <input type="checkbox"> 3
+                        </li>
+                        <li>
+                            <input type="checkbox"> 4
                         </li>
                     </ul>
                 </div>
@@ -229,16 +277,22 @@
                         <li>
                             <input type="checkbox"> 2
                         </li>
+                        <li>
+                            <input type="checkbox"> 3
+                        </li>
                     </ul>
                 </div>
                 <div id="memoryType_section">
-                    <p id="memoryType" onclick="changecolor(`memoryType_accardeon`)">▸Тип памяти</p>
+                    <p id="memoryType" onclick="changecolor(`memoryType_accardeon`)">▸Тип ОЗУ</p>
                     <ul id = "memoryType_accardeon" style="display:none;">
                         <li> 
-                            <input type="checkbox"> ddr3
+                            <input type="checkbox"> ddr5
                         </li>
                         <li>
                             <input type="checkbox"> ddr4
+                        </li>
+                        <li>
+                            <input type="checkbox"> ddr3
                         </li>
                     </ul>
                 </div>
@@ -273,7 +327,7 @@
                                 <a class="button_go" href="#"><button class="button_go">Перейти</button></a>
                                 <p class="details_count">Количество в магазине:</p>
                                 <p class="details_rating">Оценка: </p>
-                                <p class="dealer_name">Фирма: </p>
+                                <button class="add_det_bucket">Добавить в корзину</button>
                     </section>
                     <section class="details_info">
                         
