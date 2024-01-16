@@ -9,9 +9,9 @@
 body{
     color:000;
     font-size: 18px;
-    font-family: 'Inter', sans-serif;
-    
+    font-family: 'Inter', sans-serif;   
 }
+
 ul,li{
     display:block;
     margin: 0px;
@@ -26,24 +26,25 @@ a{
 
 /* Настройка меню навигации */
 #header{
-    background-color: #A8A8A8;
-    background-image: url('/SiteFrontend/static/mainpage/img/snwflks-29.gif');
+    background: -webkit-linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
+background: -moz-linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
+background: linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
     max-height: 10vh;
-    width: 100vw;
-    padding-bottom:2%;
-    padding-top:2%;
-    border-bottom:1px solid black;
+    width: 98.83vw;
+    padding-bottom:10px;
+    padding-top:10px;
+    border-bottom:1px solid #4474e7;
 }
 #santa_dance{
     width:40px;
     position: absolute;
 }
 #sitename{
-    
     color:black;
     font-size: 36px;
     margin-right: 65%;
     margin-left:25px;
+    font-weight: 400;
     
 }
 /* Выстраиваем все элементы header в ряд */
@@ -63,6 +64,10 @@ a{
 #menu li {
     margin-left: 15px;
     margin-right: 15px;
+    padding-right:5px;
+}
+#menu li:hover {
+    box-shadow: 1px 1px 0px 0px #4474e7;
 }
 #log_info{
     text-align: center;
@@ -84,12 +89,12 @@ a{
 #aside_field{
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: #a8a8a8;
+    background-color: #7798e7;
     max-width:20vw;
     display:flex;
     text-transform: uppercase;
     text-decoration: none;
-    border-right:1px solid black;
+    border-right:1px solid #4474e7;
 }
 #aside_field ul li{
     margin-bottom:25px;
@@ -102,6 +107,7 @@ a{
     width: 70px;
     height:70px;
     background-repeat: no-repeat;
+    background-color: #7798e7;
 }
 /* Настройка изображения на кнопке и толщины границ */
 #button_details{
@@ -110,23 +116,26 @@ a{
     border-width: 0px;
     position:relative;
 }
+#button_details:hover{
+    box-shadow: 2px 2px 0px 0px #7092e0;
+}
 .dropdown {
     position: relative;
     display: inline-block;
 }
 .dropdown-content {
     display: none;
-    margin-left: 20px;
+    margin-left: 30px;
     align-content: center;
     position:absolute;
-    background-color: #a8a8a8;
+    background-color: #688de7;
     min-width: 150px;
     z-index: 1;
-    border:1px solid black
+    border:1px solid #4474e7
 }
 /* Настройка размеров кнопок в выпадающем меню, цвета и толщины границ */
 #details_dropdown_content .button_info_dropdown p{
-    background-color:#A8A8A8 ;
+    background-color:#688de7 ;
     border-width: 0px;
     font-size: 12px;
     padding-right: 30px;
@@ -150,12 +159,42 @@ a{
 }
 #shop_configuration{
     display: flex;
+    background-color: #9db5eb;
 }
 /* настройки для фильтров */
 #filter_border{
-    border-right: 1px solid black;
+    border-right: 1px solid #4474e7;
     width:10vw;
     max-width: 12vw;
+    height:100vh;
+    padding-right:15px;
+    padding-left:15px;
+    overflow-y: scroll;
+}
+#filter_border::-webkit-scrollbar{
+   width:1px;
+}
+#filter_border >*{
+    margin-bottom: 5px;
+    font-size:16px;
+    letter-spacing:0.5px ;
+}
+#select_filters_section{
+    margin-top: 5px;
+    padding-top: 10pxw;
+}
+#button_select_filters{
+    width: 120px;
+    height:50px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+    border-width:1px;
+    font-size: 12px;
+    background-color: #8ba8ec;
+}
+#button_select_filters:hover{
+    background-color: #7b9deb;
 }
 /* Настройка для списка блоком с деталями */
 .det_info{
@@ -165,16 +204,16 @@ a{
 #aside_field li a {
     text-transform: uppercase;
     text-decoration: none; 
+    
 }
 /* настройка блока с деталями
  Настройка блока с поиском */
 #search_field{
-    margin-left:auto;
-    margin-right: auto;
+    margin-left:100px;
     margin-top:30px;
     height:22px;
     width: 724px;
-
+    
 }
 #search_field ul{
     justify-self: center;
@@ -186,12 +225,25 @@ a{
     border-top:none;
     border-left:none;
     border-right:none;
-    margin-left:3px;
-    
+    border-color: #8fa9e6;
+    margin-left:5px;
+    background-color: #9db5eb;
+    font-size:14px;
 }
+#search_field input:hover{
+    background-color: #98b0e9;
+}
+
 #search_field button{
     height:28px;
     width:100px;
+    border-radius: 10px;
+    border-width:1px;
+    margin-left: 5px;
+    background-color: #8ba8ec;
+}
+#search_field button:hover{
+    background-color: #7b9deb;
 }
 #search_field ul{
     display:flex;
@@ -203,20 +255,24 @@ a{
     width:25px;
 }
 #shop_section{
-    width:80vw;
+    width: 80.3vw;
     height:80vh;
 }
 /* Настройка блока с деталями */
 #shop_field{
     align-self: center;
     overflow-y: scroll;
-    width:1200px;
+    width:1250px;
     height:500px;
-    border:1px solid black; 
+    border:1px solid #98aee2; 
     margin-top:30px;
     margin-bottom: 40px;
-    margin-left:auto;
     margin-right:auto;
+    margin-left:20px;
+    border-radius: 15px;
+}
+#shop_field::-webkit-scrollbar{
+    width:0px;
 }
 #shop_field .details_info{
     height:200px;
@@ -225,9 +281,10 @@ a{
     display:grid;
     grid-template-columns: 200px 250px 250px 250px 150px;
     grid-template-rows: 120px 60px 20px ;
-    box-shadow: 1px 1px 10px #A8A8A8;
+    box-shadow: 1px 1px 10px #7f9de3;
     margin-left:auto;
     margin-right:auto;
+    border-radius: 10px;
 }
 .details_img{
     grid-column-start: 1;
@@ -253,8 +310,13 @@ a{
     height:50px;
     justify-self: center;
     align-self: center;
-
+    border-radius: 10px;
+    border-width:1px;
     font-size: 12px;
+    background-color: #8ba8ec;
+}
+.button_go:hover{
+    background-color: #7b9deb;
 }
 .add_det_bucket{
     grid-column-start: 4;
@@ -266,7 +328,14 @@ a{
     align-self: center;
     margin: 5px;
     font-size: 12px;
+    border-radius: 10px;
+    border-width:1px;
+    background-color: #8ba8ec;
 }
+.add_det_bucket:hover{
+    background-color: #7b9deb;
+}
+    
 .details_cost{
     justify-self: center;
     align-self: center;
@@ -296,12 +365,14 @@ a{
 
 /* Дно сайта */
 #footer{
-    background-color: #A8A8A8;
+    background: -webkit-linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
+background: -moz-linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
+background: linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
     max-height:100vh;
-    width:100vw;
+    width: 98.83vw;;
 }
 #footer{
-    border-top:0.5px solid black
+    border-top:0.5px solid #4474e7
 }
 #about ul{
     display:flex;
@@ -399,6 +470,3 @@ a{
 #coreSize_accardeon li{
     margin-left: 15px;
 }
-/* #videoMem_section, #cpuCores_section, #price_section, #prod_section{
-    display:none;
-} */

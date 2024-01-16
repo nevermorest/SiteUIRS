@@ -8,10 +8,10 @@
 
 body{
     color:000;
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;
-    
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;   
 }
+
 ul,li{
     display:block;
     margin: 0px;
@@ -26,24 +26,25 @@ a{
 
 /* Настройка меню навигации */
 #header{
-    background-color: #A8A8A8;
-    background-image: url('/SiteFrontend/static/mainpage/img/snwflks-29.gif');
-    max-height: 40px;
-    width: 100%;
-    padding-bottom:2%;
-    padding-top:2%;
-    border-bottom:1px solid black;
+    background: -webkit-linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
+background: -moz-linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
+background: linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
+    max-height: 10vh;
+    width: 98.83vw;
+    padding-bottom:10px;
+    padding-top:10px;
+    border-bottom:1px solid #4474e7;
 }
 #santa_dance{
     width:40px;
     position: absolute;
 }
 #sitename{
-    
     color:black;
     font-size: 36px;
     margin-right: 65%;
     margin-left:25px;
+    font-weight: 400;
     
 }
 /* Выстраиваем все элементы header в ряд */
@@ -63,6 +64,10 @@ a{
 #menu li {
     margin-left: 15px;
     margin-right: 15px;
+    padding-right:5px;
+}
+#menu li:hover {
+    box-shadow: 1px 1px 0px 0px #4474e7;
 }
 #log_info{
     text-align: center;
@@ -83,19 +88,20 @@ a{
 #main_account_info{
     width:100%;
     height:700px;
-    background-color: #A8A8A8;
+    background-color: #8fa9e6;
 }
 /* Настройка блока с информацией о профиле и о заказах */
 #account_block{
-    border:1px solid black;
-    height:700px;
+    border:1px solid #4474e7;
+    height:697px;
     width:1000px;
     margin-left:auto;
     margin-right:auto;
     display:grid;
     grid-template-columns: 500px 500px;
     grid-template-rows:700px;
-
+    border-radius: 15px;
+    background-color: #98aee2;
 }
 /* Настройка блока с информацией */
 #page_name{
@@ -115,27 +121,45 @@ a{
     border-right:none;
     width:300px;
     height:24px;
-    background-color: #A8A8A8;
+    background-color: #98aee2;
 }
 #user_info p{
     margin-top:5px;
 }
 #add_list_item{
-    width: 200px;
-    height:30px;
+    width: 150px;
+    height:50px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+    border-width:1px;
+    font-size: 12px;
+    background-color: #8ba8ec;
     margin-top: 20px;   
 }
+#add_list_item:hover{
+    background-color: #7b9deb;
+}
+
 #return_to_main_page{
-    margin-top: 220px;
-    width: 200px;
-    height:30px;
+    margin-top: 95px;
+    width: 150px;
+    height:50px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+    border-width:1px;
+    font-size: 12px;
+    background-color: #8ba8ec;
+}
+#return_to_main_page:hover{
+    background-color: #7b9deb;
 }
 /* Настройка блока с доставкой */
 #delivery_status{
     justify-self: center;
-
     grid-column-start:2;
-    border:1px solid black;
+    border:1px solid #8ba8ec;
     height:500px;
     width:480px;
     margin-top: 20px;
@@ -143,6 +167,10 @@ a{
     margin-right: auto;
     margin-bottom: auto;
     overflow-y: scroll;
+    border-radius: 15px;
+}
+#delivery_status::-webkit-scrollbar{
+    width:0px;
 }
 .details_info *{
     margin-left:5px;
@@ -150,13 +178,15 @@ a{
 /* Настройка блока с деталями */
 .details_info{
     display: grid;
-    border:1px solid black;
+    box-shadow: 2px 2px 2px 1px #7087bd;
     width:450px;
     height: 150px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5px;
     grid-template-columns: 120px 130px 200px;
     grid-template-rows: 120px 30px;
+    border-radius: 15px;
 
 }
 .details_img{
@@ -177,22 +207,21 @@ a{
     grid-row-start: 2;
 }
 /* Дно сайта */
+/* Дно сайта */
 #footer{
-    background-color: #A8A8A8;
-    max-height:20%;
-    width:100%;
+    background: -webkit-linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
+background: -moz-linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
+background: linear-gradient(45deg, rgb(119, 152, 231), rgb(104, 141, 231), rgb(68, 116, 231));
+    max-height:100vh;
+    width: 98.83vw;;
 }
 #footer{
-    border-top:0.5px solid black;
-    height :100vh;
+    border-top:0.5px solid #4474e7
 }
 #about ul{
     display:flex;
-    
 }
 #about ul li {
     margin-left: 100px;
     max-width: 200px;
-    margin-left:auto;
-    margin-right:auto;
 }

@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="/SiteFrontend/static/mainpage/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Playpen+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Шапка сайта с навигацией -->
@@ -50,7 +52,8 @@
                         <div class="dropdown-content">
                             <ul id="details_dropdown_content">
                                 <li class="button_info_dropdown">
-                                    <p onclick="showFiltersVideoCard()">Видеокарта</p>      
+                                    <a href="#" id="motherboard"><p onclick="showFiltersVideoCard()">Видеокарта</p>  </a>
+                                        
                                 </li>
                                 <li class="button_info_dropdown">
                                     <p onclick="showFiltersMother()">Материнская плата</p> 
@@ -83,7 +86,7 @@
         </aside>
         <main id="shop_configuration">
             <section id="filter_border">
-                <h3>Фильтры</h3>
+                <h4 style="font-size:24px; font-weight: 500;">Фильтры</h4>
                 <div id="prod_section">
                     <p id="prod" onclick="changecolor(`prod_accardeon`)">▸Производитель</p>
                         <ul id="prod_accardeon" style="display:none;">
@@ -307,6 +310,9 @@
                         </li>
                     </ul>
                 </div>
+                <div id="select_filters_section">
+                    <button id="button_select_filters">Применить фильтры</button>
+                </div>
             </section>
             <section id="shop_section">
                 <div id="search_field">
@@ -368,7 +374,7 @@
                 </li>
                 <li>
                     <h5>Другие продукты</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quos incidunt veritatis praesentium perferendis et fuga explicabo ab aliquam voluptatibus.</p>
+                    <p>Репозиторий на GitHub: <a href="#"></a>Ссылка</p>
                 </li>
             </ul>
         </section>
