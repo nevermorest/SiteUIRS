@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitename(Change)(change)</title>
+    <title>YakuMorHardware</title>
     <link rel="stylesheet" href="{% static 'mainpage/css/bucket.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,26 +12,26 @@
 </head>
 <body>
     <!-- Шапка сайта с навигацией -->
-    <header id="header">
+    <header id = "header">
         <nav id="navigate">
-            <h3 id="sitename"><a href="#">DNS5</a><img id="santa_dance" src="{% static 'mainpage/img/picmix.com_1748393.gif' %}" alt="я джифка"></h3>
-            <ul id="menu">
+            <h3 id = "sitename"><a href="#">YakuMorHardware</a><img id="santa_dance" src="{% static 'mainpage/img/picmix.com_1748393.gif' %}" alt="я джифка"></h3>
+            <ul id = "menu">
                 <li>
-                    <a id="menu-el" href="#">
-                        <img id="bucket_logo" src="{% static 'mainpage/img/bucket_logo.png' %}" alt="">
-                        <p id="log_info">Корзина</p>
+                    <a id = "menu-el" href="#">
+                        <img  id = "bucket_logo" src="{% static 'mainpage/img/bucket_logo.png' %}" alt="">
+                        <p id = "log_info">Корзина</p>
                     </a>
                 </li>
                 <li>
-                    <a id="menu-el" href="#">
-                        <img id="account_logo" src="{% static 'mainpage/img/account_logo.png' %}" alt="">
-                        <p id="log_info">Аккаунт</p>
+                    <a id = "menu-el" href="#">
+                        <img  id = "account_logo" src="{% static 'mainpage/img/account_logo.png' %}" alt="">
+                        <p id = "log_info">Аккаунт</p>
                     </a>
                 </li>
                 <li>
-                    <a id="menu-el" href="#">
-                        <img id="reg_logo" src="{% static 'mainpage/img/reg_logo.png' %}" alt="">
-                        <p id="log_info">Вход</p>
+                    <a id = "menu-el" href="#">
+                        <img  id = "reg_logo" src="{% static 'mainpage/img/reg_logo.png' %}" alt="">
+                        <p id = "log_info">Вход</p>
                     </a>
                 </li>  
                 <li>
@@ -47,27 +47,22 @@
             </div>
             <div id="purchased_items">
                 <div id="added_items">
-                    <section class="details_info">
-                        <img class="details_img" alt="Фото детали">
-                        <p class="details_description">Видеокарта гигабайт туда суда было 
-                        вспылало два ядра два гига очень быстрая классная смешная интересная/12гб</p>
-                        <p class="details_cost"> ₽</p>
-                        <a class="button_go" href="#"><button class="button_go">Перейти</button></a>
-                        <p class="details_rating">Оценка: </p> 
-                        <p class="dealer_name">Фирма: </p>
-                        <button class="button_delete_item">X</button>
-                    </section>
-                    
-                    <section class="details_info"></section>
-                    <section class="details_info"></section>
-                    <section class="details_info"></section>
+                    {% for component in components %}
+                        <section class="details_info">
+                            <img class="details_img" src="{{ component.image.url }}" alt="Фото детали" style=" max-width: 80%;">
+                            <p class="details_description">{{ component.name }}</p>
+                            <p class="details_cost">{{ component.price }} ₽</p>
+                            <a class="button_go" href="#"><button class="button_go">Перейти</button></a>
+                            <p class="details_rating"></p>  
+                        </section>
+                    {% endfor %}
                 </div>
                 <div id="confrim_section">
-                    <p id="total_cost">Общая стоимость:</p>
+                    <p id="total_cost">Общая стоимость:   165 898 ₽</p>
                     <button id="confrim_button">Оформить</button>            
                 </div>
                 <div id="back_main_section">
-                    <a  class="back_main" href="#"><button class="back_main">Вернуться на главную</button></a>
+                    <a  class ="back_main"href="#"><button class="back_main">Вернуться на главную</button></a>
                 </div>
                 
             </div>
@@ -99,5 +94,3 @@
             </ul>
         </section>
     </footer> 
-</body>
-</html>
